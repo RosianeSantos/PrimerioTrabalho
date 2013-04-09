@@ -53,6 +53,16 @@ public class JFLogin extends javax.swing.JFrame {
         lblSenha.setText("Senha:");
 
         btnEntrar.setText("Entrar");
+        btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEntrarMouseClicked(evt);
+            }
+        });
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         btnSair.setText("Sair");
 
@@ -121,9 +131,15 @@ public class JFLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1AncestorAdded
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+     frmPrincipal principal = new frmPrincipal();
+    principal.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEntrarMouseClicked
+     
     public static void main(String args[]) {
         /*
          * Set the Nimbus look and feel
@@ -157,11 +173,16 @@ public class JFLogin extends javax.swing.JFrame {
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
 
+            @Override
             public void run() {
                 new JFLogin().setVisible(true);
             }
         });
     }
+    /**
+     * @param args the command line arguments
+     */
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnSair;
