@@ -185,8 +185,7 @@ public class frmPrincipal extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_menListagemProdutosActionPerformed
 
     private void menClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menClienteActionPerformed
-     frmCadastro cadastro = new frmCadastro();
-     cadastro.setVisible(true);        
+         
     }//GEN-LAST:event_menClienteActionPerformed
 
     private void menClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menClienteMouseClicked
