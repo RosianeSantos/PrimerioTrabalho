@@ -173,7 +173,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuCadastroMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuCadastroMenuSelected
-        // TODO add your handling code here:
+  
     }//GEN-LAST:event_menuCadastroMenuSelected
 
     private void menProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menProdutoActionPerformed
@@ -185,11 +185,13 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_menListagemProdutosActionPerformed
 
     private void menClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menClienteActionPerformed
-         
+        frmCadastro janela = new frmCadastro();
+         add(janela);
+        janela.setVisible(true);
     }//GEN-LAST:event_menClienteActionPerformed
 
     private void menClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menClienteMouseClicked
-        // TODO add your handling code here:
+     
     }//GEN-LAST:event_menClienteMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
