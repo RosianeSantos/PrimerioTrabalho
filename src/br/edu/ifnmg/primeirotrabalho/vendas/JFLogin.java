@@ -132,15 +132,18 @@ public class JFLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1AncestorAdded
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-     frmVenda janela = new frmVenda();
-     add(janela);
-     janela.setVisible(true);
+        frmPrincipal janela = new frmPrincipal();
+        janela.setVisible(true);
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
-       frmVenda janela = new frmVenda();
+     /*  frmVenda janela = new frmVenda();
        add(janela);
        janela.setVisible(true);
+       * 
+       */
     }//GEN-LAST:event_btnEntrarMouseClicked
      
     public static void main(String args[]) {
