@@ -8,7 +8,7 @@ package br.edu.ifnmg.primeirotrabalho.vendas;
  *
  * @author Rosy
  */
-public class frmPrincipal extends javax.swing.JInternalFrame {
+public class frmPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form frmPrincipal
