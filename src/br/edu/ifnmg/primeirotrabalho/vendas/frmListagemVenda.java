@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rosy
@@ -50,10 +52,25 @@ public class frmListagemVenda extends javax.swing.JInternalFrame {
         lblListaVenda.setText("LISTA DE VENDAS:");
 
         btnAlterarListaVenda.setText("Alterar");
+        btnAlterarListaVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarListaVendaActionPerformed(evt);
+            }
+        });
 
         btnExcluirListaVenda.setText("Excluir");
+        btnExcluirListaVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirListaVendaActionPerformed(evt);
+            }
+        });
 
         btnSairListaVenda.setText("Sair");
+        btnSairListaVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairListaVendaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -103,11 +120,42 @@ public class frmListagemVenda extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAlterarListaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarListaVendaActionPerformed
+        if(JOptionPane.showConfirmDialog(rootPane, "Deseja alterar a opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Alteração Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnAlterarListaVendaActionPerformed
+
+    private void btnExcluirListaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirListaVendaActionPerformed
+       if(JOptionPane.showConfirmDialog(rootPane, "Deseja excluir a opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Exclusão Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnExcluirListaVendaActionPerformed
+
+    private void btnSairListaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairListaVendaActionPerformed
+         if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnSairListaVendaActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterarListaVenda;
     private javax.swing.JButton btnExcluirListaVenda;
