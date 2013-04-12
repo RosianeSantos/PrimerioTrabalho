@@ -29,7 +29,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblCadastroVenda = new javax.swing.JTable();
         lblValorTotalProduto = new javax.swing.JLabel();
         txtValorTotalProduto = new javax.swing.JTextField();
         btnRealizarVenda = new javax.swing.JButton();
@@ -46,7 +46,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
 
         jLabel1.setText("VENDA:");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblCadastroVenda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -57,7 +57,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
                 "Produto:", "Quantidade:", "Varlor Unitário:"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblCadastroVenda);
 
         lblValorTotalProduto.setText("Valor Total:");
 
@@ -152,7 +152,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtValorTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblValorTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 47, Short.MAX_VALUE)
+                .addGap(28, 51, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblFormaPagamento)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -199,12 +199,12 @@ public class frmVenda extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblClienteVenda;
     private javax.swing.JLabel lblDataVenda;
     private javax.swing.JLabel lblFormaPagamento;
     private javax.swing.JLabel lblUsuarioVenda;
     private javax.swing.JLabel lblValorTotalProduto;
+    private javax.swing.JTable tblCadastroVenda;
     private javax.swing.JTextField txtClienteVenda;
     private javax.swing.JFormattedTextField txtDataVenda;
     private javax.swing.JTextField txtUsuarioVenda;
