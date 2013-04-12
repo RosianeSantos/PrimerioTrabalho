@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rosy
@@ -49,7 +51,7 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(lblListagemCliente)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         tblListaCliente.setModel(new javax.swing.table.DefaultTableModel(
@@ -66,10 +68,25 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblListaCliente);
 
         btnAlterarListaCliente.setText("Alterar");
+        btnAlterarListaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarListaClienteActionPerformed(evt);
+            }
+        });
 
         btnCancelarListaCliente.setText("Cancelar");
+        btnCancelarListaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarListaClienteActionPerformed(evt);
+            }
+        });
 
         btnSairListaCliente.setText("Sair");
+        btnSairListaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairListaClienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,6 +125,37 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAlterarListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarListaClienteActionPerformed
+       if(JOptionPane.showConfirmDialog(rootPane, "Deseja alterar a opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Alteração Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnAlterarListaClienteActionPerformed
+
+    private void btnCancelarListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarListaClienteActionPerformed
+        if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnCancelarListaClienteActionPerformed
+
+    private void btnSairListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairListaClienteActionPerformed
+         if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnSairListaClienteActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterarListaCliente;
     private javax.swing.JButton btnCancelarListaCliente;
