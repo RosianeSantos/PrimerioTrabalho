@@ -32,8 +32,8 @@ public class frmVenda extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
         lblValorTotalProduto = new javax.swing.JLabel();
         txtValorTotalProduto = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnRealizarVenda = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         lblUsuarioVenda = new javax.swing.JLabel();
         lblClienteVenda = new javax.swing.JLabel();
         lblDataVenda = new javax.swing.JLabel();
@@ -42,7 +42,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
         txtDataVenda = new javax.swing.JFormattedTextField();
         lblFormaPagamento = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jComboBox1 = new javax.swing.JComboBox();
+        cbxFormaPagamento = new javax.swing.JComboBox();
 
         jLabel1.setText("VENDA:");
 
@@ -67,9 +67,9 @@ public class frmVenda extends javax.swing.JInternalFrame {
             }
         });
 
-        jButton1.setText("Realizar Venda");
+        btnRealizarVenda.setText("Realizar Venda");
 
-        jButton2.setText("Cancelar");
+        btnCancelar.setText("Cancelar");
 
         lblUsuarioVenda.setText("Usuario:");
 
@@ -81,13 +81,13 @@ public class frmVenda extends javax.swing.JInternalFrame {
 
         lblFormaPagamento.setText("Forma de Pagamento:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbxFormaPagamento.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbxFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cbxFormaPagamentoActionPerformed(evt);
             }
         });
-        jScrollPane2.setViewportView(jComboBox1);
+        jScrollPane2.setViewportView(cbxFormaPagamento);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,9 +122,9 @@ public class frmVenda extends javax.swing.JInternalFrame {
                                             .addComponent(txtValorTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(27, 27, 27))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jButton1)
+                                            .addComponent(btnRealizarVenda)
                                             .addGap(18, 18, 18)
-                                            .addComponent(jButton2)))))
+                                            .addComponent(btnCancelar)))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(lblFormaPagamento)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -152,14 +152,14 @@ public class frmVenda extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtValorTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblValorTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 43, Short.MAX_VALUE)
+                .addGap(28, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblFormaPagamento)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnRealizarVenda))
                 .addGap(20, 20, 20))
         );
 
@@ -187,14 +187,14 @@ public class frmVenda extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtValorTotalProdutoActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void cbxFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxFormaPagamentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cbxFormaPagamentoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnRealizarVenda;
+    private javax.swing.JComboBox cbxFormaPagamento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
