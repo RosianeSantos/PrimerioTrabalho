@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rosy
@@ -50,7 +52,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblListagemFormaPagamento)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         tblListaPagamento.setModel(new javax.swing.table.DefaultTableModel(
@@ -67,10 +69,25 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblListaPagamento);
 
         btnAlterarFormaPagamento.setText("Alterar");
+        btnAlterarFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAlterarFormaPagamentoActionPerformed(evt);
+            }
+        });
 
         btnExcluirFormaPagamento.setText("Excluir");
+        btnExcluirFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirFormaPagamentoActionPerformed(evt);
+            }
+        });
 
         btnSairFormaPagamento.setText("Sair");
+        btnSairFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairFormaPagamentoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,6 +122,37 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAlterarFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarFormaPagamentoActionPerformed
+         if(JOptionPane.showConfirmDialog(rootPane, "Deseja alterar a opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Alteração Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnAlterarFormaPagamentoActionPerformed
+
+    private void btnExcluirFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirFormaPagamentoActionPerformed
+        if(JOptionPane.showConfirmDialog(rootPane, "Deseja excluir a opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Exclusão Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnExcluirFormaPagamentoActionPerformed
+
+    private void btnSairFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairFormaPagamentoActionPerformed
+       if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnSairFormaPagamentoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAlterarFormaPagamento;
     private javax.swing.JButton btnExcluirFormaPagamento;
