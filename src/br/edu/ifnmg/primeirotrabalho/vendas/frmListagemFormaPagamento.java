@@ -29,7 +29,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         lblListagemFormaPagamento = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblListaPagamento = new javax.swing.JTable();
         btnAlterarFormaPagamento = new javax.swing.JButton();
         btnExcluirFormaPagamento = new javax.swing.JButton();
         btnSairFormaPagamento = new javax.swing.JButton();
@@ -53,7 +53,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblListaPagamento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -64,7 +64,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
                 "Estilo de pagamento"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblListaPagamento);
 
         btnAlterarFormaPagamento.setText("Alterar");
 
@@ -111,7 +111,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSairFormaPagamento;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblListagemFormaPagamento;
+    private javax.swing.JTable tblListaPagamento;
     // End of variables declaration//GEN-END:variables
 }
