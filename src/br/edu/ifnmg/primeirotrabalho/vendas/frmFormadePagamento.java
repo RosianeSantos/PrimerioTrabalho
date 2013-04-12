@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rosy
@@ -31,7 +33,6 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         txtTipoPagamento = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
-        btnCancelarFormaPagamento = new javax.swing.JButton();
         btnSairFormadePagamento = new javax.swing.JButton();
 
         lblFormaPagamento.setText("FORMA DE PAGAMENTO:");
@@ -39,10 +40,18 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
         jLabel1.setText("Tipo:");
 
         btnSalvar.setText("Salvar");
-
-        btnCancelarFormaPagamento.setText("Cancelar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnSairFormadePagamento.setText("Sair");
+        btnSairFormadePagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairFormadePagamentoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -57,13 +66,10 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtTipoPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSairFormadePagamento)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnSalvar)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCancelarFormaPagamento)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addComponent(btnSalvar)
+                .addGap(18, 18, 18)
+                .addComponent(btnSairFormadePagamento)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,10 +80,8 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
                     .addComponent(jLabel1)
                     .addComponent(txtTipoPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSalvar)
-                    .addComponent(btnCancelarFormaPagamento))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                .addComponent(btnSairFormadePagamento)
-                .addGap(23, 23, 23))
+                    .addComponent(btnSairFormadePagamento))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -93,8 +97,28 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+       if(JOptionPane.showConfirmDialog(rootPane, "Deseja Salvar a operação")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnSairFormadePagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairFormadePagamentoActionPerformed
+        if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da operação")== 0){
+          //btnRealizarVenda.setText("Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Realizada com sucesso!");
+       }else{
+         // btnRealizarVenda.setText("Não Salvo");
+          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
+       }
+    }//GEN-LAST:event_btnSairFormadePagamentoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelarFormaPagamento;
     private javax.swing.JButton btnSairFormadePagamento;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JLabel jLabel1;
