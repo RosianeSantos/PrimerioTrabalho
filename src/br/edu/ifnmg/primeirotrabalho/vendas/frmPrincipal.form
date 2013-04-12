@@ -167,7 +167,7 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="extendedState" type="int" value="3"/>
+    <Property name="extendedState" type="int" value="6"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar2"/>
