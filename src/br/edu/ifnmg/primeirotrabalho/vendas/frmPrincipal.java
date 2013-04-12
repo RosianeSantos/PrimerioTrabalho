@@ -119,6 +119,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuCadastro.add(menProduto);
 
         menPagamento.setText("Formas de Pagamento");
+        menPagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menPagamentoActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menPagamento);
 
         jMenuBar2.add(menuCadastro);
@@ -206,6 +211,12 @@ public class frmPrincipal extends javax.swing.JFrame {
      add(janela);
      janela.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void menPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menPagamentoActionPerformed
+      frmFormadePagamento janela = new frmFormadePagamento();
+      add(janela);
+      janela.setVisible(true);
+    }//GEN-LAST:event_menPagamentoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
