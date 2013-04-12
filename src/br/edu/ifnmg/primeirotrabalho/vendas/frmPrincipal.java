@@ -88,12 +88,12 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         menuCadastro.setText("Cadastro");
         menuCadastro.addMenuListener(new javax.swing.event.MenuListener() {
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
+            }
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
                 menuCadastroMenuSelected(evt);
-            }
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
         });
 
@@ -144,6 +144,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu7.setText("Venda");
 
         jMenuItem1.setText("Realizar Venda");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu7.add(jMenuItem1);
 
         jMenuItem2.setText("Cancelar Venda");
@@ -164,7 +169,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -177,7 +182,9 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_menuCadastroMenuSelected
 
     private void menProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menProdutoActionPerformed
-        // TODO add your handling code here:
+        frmProduto janela = new frmProduto();
+         add(janela);
+        janela.setVisible(true);
     }//GEN-LAST:event_menProdutoActionPerformed
 
     private void menListagemProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemProdutosActionPerformed
@@ -193,6 +200,12 @@ public class frmPrincipal extends javax.swing.JFrame {
     private void menClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menClienteMouseClicked
      
     }//GEN-LAST:event_menClienteMouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+     frmVenda janela = new frmVenda();
+     add(janela);
+     janela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
