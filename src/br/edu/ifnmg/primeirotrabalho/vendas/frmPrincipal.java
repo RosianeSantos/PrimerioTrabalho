@@ -131,6 +131,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuListagem.setText("Listagem");
 
         menListagemCliente.setText("Cliente");
+        menListagemCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menListagemClienteActionPerformed(evt);
+            }
+        });
         menuListagem.add(menListagemCliente);
 
         menListagemProdutos.setText("Produtos");
@@ -142,6 +147,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuListagem.add(menListagemProdutos);
 
         menListagemPagamentos.setText("Pagamentos");
+        menListagemPagamentos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menListagemPagamentosActionPerformed(evt);
+            }
+        });
         menuListagem.add(menListagemPagamentos);
 
         jMenuBar2.add(menuListagem);
@@ -217,6 +227,18 @@ public class frmPrincipal extends javax.swing.JFrame {
       add(janela);
       janela.setVisible(true);
     }//GEN-LAST:event_menPagamentoActionPerformed
+
+    private void menListagemPagamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemPagamentosActionPerformed
+       frmListagemFormaPagamento janela = new frmListagemFormaPagamento();
+       add(janela);
+       janela.setVisible(true);
+    }//GEN-LAST:event_menListagemPagamentosActionPerformed
+
+    private void menListagemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemClienteActionPerformed
+        frmListagemCliente janela = new frmListagemCliente();
+        add(janela);
+        janela.setVisible(true);
+    }//GEN-LAST:event_menListagemClienteActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
