@@ -76,6 +76,8 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenu6.setText("Edit");
         jMenuBar4.add(jMenu6);
 
+        setExtendedState(3);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -89,12 +91,12 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         menuCadastro.setText("Cadastro");
         menuCadastro.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
-            }
             public void menuCanceled(javax.swing.event.MenuEvent evt) {
             }
             public void menuSelected(javax.swing.event.MenuEvent evt) {
                 menuCadastroMenuSelected(evt);
+            }
+            public void menuDeselected(javax.swing.event.MenuEvent evt) {
             }
         });
 
