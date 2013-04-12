@@ -103,7 +103,7 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 11, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(138, 138, 138)
+                        .addGap(147, 147, 147)
                         .addComponent(btnAlterarListaProduto)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnExcluirListaProduto)
@@ -119,12 +119,12 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128)
+                .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAlterarListaProduto)
                     .addComponent(btnExcluirListaProduto)
                     .addComponent(btnSairListaProduto))
-                .addGap(20, 20, 20))
+                .addGap(49, 49, 49))
         );
 
         pack();
@@ -151,13 +151,8 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnAlterarListaProdutoActionPerformed
 
     private void btnSairListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairListaProdutoActionPerformed
-       if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
-          //btnRealizarVenda.setText("Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
-       }else{
-         // btnRealizarVenda.setText("Não Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
-       }
+      this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnSairListaProdutoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
