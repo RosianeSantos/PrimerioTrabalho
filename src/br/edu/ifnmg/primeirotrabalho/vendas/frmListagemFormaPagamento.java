@@ -27,14 +27,14 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        txtListagemPagamento = new javax.swing.JTextField();
+        lblListagemFormaPagamento = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         btnAlterarFormaPagamento = new javax.swing.JButton();
         btnExcluirFormaPagamento = new javax.swing.JButton();
         btnSairFormaPagamento = new javax.swing.JButton();
 
-        txtListagemPagamento.setText(" LISTAGEM DA FORMA DE PAGAMENTO:");
+        lblListagemFormaPagamento.setText("LISTAGEM FORMA DE PAGAMENTO:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -42,15 +42,15 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtListagemPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblListagemFormaPagamento)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtListagemPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblListagemFormaPagamento)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -112,6 +112,6 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField txtListagemPagamento;
+    private javax.swing.JLabel lblListagemFormaPagamento;
     // End of variables declaration//GEN-END:variables
 }

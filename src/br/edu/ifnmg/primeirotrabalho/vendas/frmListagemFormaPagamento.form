@@ -61,7 +61,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtListagemPagamento" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblListagemFormaPagamento" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -70,16 +70,16 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtListagemPagamento" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lblListagemFormaPagamento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="txtListagemPagamento">
+        <Component class="javax.swing.JLabel" name="lblListagemFormaPagamento">
           <Properties>
-            <Property name="text" type="java.lang.String" value=" LISTAGEM DA FORMA DE PAGAMENTO:"/>
+            <Property name="text" type="java.lang.String" value="LISTAGEM FORMA DE PAGAMENTO:"/>
           </Properties>
         </Component>
       </SubComponents>
