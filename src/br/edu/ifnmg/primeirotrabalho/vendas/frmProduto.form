@@ -22,16 +22,16 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="21" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,40 +45,38 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblValorProduto" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblDescicaoProduto" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblValorVenda" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtDescicaoProduto" alignment="0" min="-2" pref="198" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="txtValorVenda" alignment="0" pref="61" max="32767" attributes="0"/>
-                                          <Component id="txtValorProduto" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="lblEstoque" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                  <Component id="txtEstoque" min="-2" pref="61" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="lblCadastroProduto" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblValorProduto" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblDescicaoProduto" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblValorVenda" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="72" max="32767" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="txtDescicaoProduto" alignment="0" min="-2" pref="198" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="txtValorVenda" alignment="0" pref="61" max="32767" attributes="0"/>
+                                  <Component id="txtValorProduto" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="203" max="32767" attributes="0"/>
-                          <Component id="btnSalvarProduto" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnCancelarProduto" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      <Component id="lblCadastroProduto" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lblEstoque" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="btnSalvarProduto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnCancelarProduto" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnSairProduto" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txtEstoque" min="-2" pref="61" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -107,10 +105,11 @@
                       <Component id="txtEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnSalvarProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCancelarProduto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSairProduto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -165,6 +164,14 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDescicaoProduto">
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSairProduto">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairProdutoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
