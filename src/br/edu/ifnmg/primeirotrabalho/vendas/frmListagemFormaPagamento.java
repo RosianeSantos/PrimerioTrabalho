@@ -144,13 +144,8 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnExcluirFormaPagamentoActionPerformed
 
     private void btnSairFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairFormaPagamentoActionPerformed
-       if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
-          //btnRealizarVenda.setText("Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
-       }else{
-         // btnRealizarVenda.setText("Não Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
-       }
+       this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnSairFormaPagamentoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
