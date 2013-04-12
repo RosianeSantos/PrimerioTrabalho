@@ -51,7 +51,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -177,9 +176,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
         jMenu7.add(jMenuItem1);
 
-        jMenuItem2.setText("Cancelar Venda");
-        jMenu7.add(jMenuItem2);
-
         jMenuBar2.add(jMenu7);
 
         setJMenuBar(jMenuBar2);
@@ -273,7 +269,6 @@ public class frmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuBar jMenuBar4;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
