@@ -44,9 +44,14 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="txtTipoPagamento" min="-2" pref="155" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnCancelarFormaPagamento" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="btnSairFormadePagamento" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btnCancelarFormaPagamento" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -62,7 +67,9 @@
                       <Component id="btnSalvar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnCancelarFormaPagamento" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="201" max="32767" attributes="0"/>
+                  <EmptySpace pref="155" max="32767" attributes="0"/>
+                  <Component id="btnSairFormadePagamento" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -88,6 +95,11 @@
         <Component class="javax.swing.JButton" name="btnCancelarFormaPagamento">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSairFormadePagamento">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
         </Component>
       </SubComponents>
