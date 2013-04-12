@@ -95,18 +95,21 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAlterarListaCliente)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnCancelarListaCliente)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnSairListaCliente)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSairListaCliente)
+                        .addGap(21, 21, 21))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,12 +118,12 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128)
+                .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAlterarListaCliente)
                     .addComponent(btnCancelarListaCliente)
                     .addComponent(btnSairListaCliente))
-                .addGap(25, 25, 25))
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -147,13 +150,8 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnCancelarListaClienteActionPerformed
 
     private void btnSairListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairListaClienteActionPerformed
-         if(JOptionPane.showConfirmDialog(rootPane, "Deseja Sair da opção")== 0){
-          //btnRealizarVenda.setText("Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Opção Realizada com sucesso!");
-       }else{
-         // btnRealizarVenda.setText("Não Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
-       }
+        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_btnSairListaClienteActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
