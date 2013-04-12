@@ -48,6 +48,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         menListagemCliente = new javax.swing.JMenuItem();
         menListagemProdutos = new javax.swing.JMenuItem();
         menListagemPagamentos = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu7 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -154,6 +155,14 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
         menuListagem.add(menListagemPagamentos);
 
+        jMenuItem4.setText("Venda");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        menuListagem.add(jMenuItem4);
+
         jMenuBar2.add(menuListagem);
 
         jMenu7.setText("Venda");
@@ -203,7 +212,9 @@ public class frmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_menProdutoActionPerformed
 
     private void menListagemProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemProdutosActionPerformed
-        // TODO add your handling code here:
+       frmListagemProduto janela = new frmListagemProduto();
+       add(janela);
+       janela.setVisible(true);
     }//GEN-LAST:event_menListagemProdutosActionPerformed
 
     private void menClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menClienteActionPerformed
@@ -240,6 +251,12 @@ public class frmPrincipal extends javax.swing.JFrame {
         janela.setVisible(true);
     }//GEN-LAST:event_menListagemClienteActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        frmListagemVenda janela = new frmListagemVenda();
+        add(janela);
+        janela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu1;
@@ -256,6 +273,7 @@ public class frmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem menCliente;
     private javax.swing.JMenuItem menListagemCliente;
