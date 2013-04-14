@@ -36,6 +36,8 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
         btnExcluirFormaPagamento = new javax.swing.JButton();
         btnSairFormaPagamento = new javax.swing.JButton();
 
+        setBorder(null);
+
         lblListagemFormaPagamento.setText("LISTAGEM FORMA DE PAGAMENTO:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -52,7 +54,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblListagemFormaPagamento)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         tblListaPagamento.setModel(new javax.swing.table.DefaultTableModel(
@@ -104,7 +106,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
                         .addComponent(btnExcluirFormaPagamento)
                         .addGap(18, 18, 18)
                         .addComponent(btnSairFormaPagamento)))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
