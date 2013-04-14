@@ -17,7 +17,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         initComponents();
     }
 
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,90 +26,57 @@ public class frmPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuBar3 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
-        jMenuBar4 = new javax.swing.JMenuBar();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jPanel1 = new javax.swing.JPanel();
         jMenuBar2 = new javax.swing.JMenuBar();
-        menuCadastro = new javax.swing.JMenu();
-        menCliente = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jPanel1 = new javax.swing.JPanel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuCadastroCliente = new javax.swing.JMenu();
+        menitemCliente = new javax.swing.JMenuItem();
         menProduto = new javax.swing.JMenuItem();
-        menPagamento = new javax.swing.JMenuItem();
-        menuListagem = new javax.swing.JMenu();
-        menListagemCliente = new javax.swing.JMenuItem();
-        menListagemProdutos = new javax.swing.JMenuItem();
-        menListagemPagamentos = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenu7 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menFormaPagamento = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        menListarCliente = new javax.swing.JMenuItem();
+        menListarFormaPagamento = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        menListarVenda = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        menItemRealizarVenda = new javax.swing.JMenuItem();
 
         jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        jMenuBar2.add(jMenu1);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMenu3.setText("Edit");
+        jMenuBar2.add(jMenu3);
 
-        jMenuItem3.setText("jMenuItem3");
-
-        jMenu3.setText("File");
-        jMenuBar3.add(jMenu3);
-
-        jMenu4.setText("Edit");
-        jMenuBar3.add(jMenu4);
-
-        jCheckBoxMenuItem1.setSelected(true);
-        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
-
-        jMenu5.setText("File");
-        jMenuBar4.add(jMenu5);
-
-        jMenu6.setText("Edit");
-        jMenuBar4.add(jMenu6);
-
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(6);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 384, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 235, Short.MAX_VALUE)
+            .addGap(0, 279, Short.MAX_VALUE)
         );
 
-        menuCadastro.setText("Cadastro");
-        menuCadastro.addMenuListener(new javax.swing.event.MenuListener() {
-            public void menuCanceled(javax.swing.event.MenuEvent evt) {
-            }
-            public void menuSelected(javax.swing.event.MenuEvent evt) {
-                menuCadastroMenuSelected(evt);
-            }
-            public void menuDeselected(javax.swing.event.MenuEvent evt) {
-            }
-        });
+        menuCadastroCliente.setText("Cadastro");
 
-        menCliente.setText("Cliente");
-        menCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+        menitemCliente.setText("Cliente");
+        menitemCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                menClienteMouseClicked(evt);
+                menitemClienteMouseClicked(evt);
             }
         });
-        menCliente.addActionListener(new java.awt.event.ActionListener() {
+        menitemCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menClienteActionPerformed(evt);
+                menitemClienteActionPerformed(evt);
             }
         });
-        menuCadastro.add(menCliente);
+        menuCadastroCliente.add(menitemCliente);
 
         menProduto.setText("Produto");
         menProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -118,167 +84,156 @@ public class frmPrincipal extends javax.swing.JFrame {
                 menProdutoActionPerformed(evt);
             }
         });
-        menuCadastro.add(menProduto);
+        menuCadastroCliente.add(menProduto);
 
-        menPagamento.setText("Formas de Pagamento");
-        menPagamento.addActionListener(new java.awt.event.ActionListener() {
+        menFormaPagamento.setText("Forma Pagamento");
+        menFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menPagamentoActionPerformed(evt);
+                menFormaPagamentoActionPerformed(evt);
             }
         });
-        menuCadastro.add(menPagamento);
+        menuCadastroCliente.add(menFormaPagamento);
 
-        jMenuBar2.add(menuCadastro);
+        jMenuBar1.add(menuCadastroCliente);
 
-        menuListagem.setText("Listagem");
-
-        menListagemCliente.setText("Cliente");
-        menListagemCliente.addActionListener(new java.awt.event.ActionListener() {
+        jMenu2.setText("Listar");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menListagemClienteActionPerformed(evt);
+                jMenu2ActionPerformed(evt);
             }
         });
-        menuListagem.add(menListagemCliente);
 
-        menListagemProdutos.setText("Produtos");
-        menListagemProdutos.addActionListener(new java.awt.event.ActionListener() {
+        menListarCliente.setText("Cliente");
+        jMenu2.add(menListarCliente);
+
+        menListarFormaPagamento.setText("Produto");
+        menListarFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menListagemProdutosActionPerformed(evt);
+                menListarFormaPagamentoActionPerformed(evt);
             }
         });
-        menuListagem.add(menListagemProdutos);
+        jMenu2.add(menListarFormaPagamento);
 
-        menListagemPagamentos.setText("Pagamentos");
-        menListagemPagamentos.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem3.setText("Forma Pagamento");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menListagemPagamentosActionPerformed(evt);
+                jMenuItem3ActionPerformed(evt);
             }
         });
-        menuListagem.add(menListagemPagamentos);
+        jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setText("Venda");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        menListarVenda.setText("Venda");
+        menListarVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                menListarVendaActionPerformed(evt);
             }
         });
-        menuListagem.add(jMenuItem4);
+        jMenu2.add(menListarVenda);
 
-        jMenuBar2.add(menuListagem);
+        jMenuBar1.add(jMenu2);
 
-        jMenu7.setText("Venda");
+        jMenu4.setText("Venda");
 
-        jMenuItem1.setText("Realizar Venda");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        menItemRealizarVenda.setText("Realizar Venda");
+        menItemRealizarVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                menItemRealizarVendaActionPerformed(evt);
             }
         });
-        jMenu7.add(jMenuItem1);
+        jMenu4.add(menItemRealizarVenda);
 
-        jMenuBar2.add(jMenu7);
+        jMenuBar1.add(jMenu4);
 
-        setJMenuBar(jMenuBar2);
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuCadastroMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_menuCadastroMenuSelected
-  
-    }//GEN-LAST:event_menuCadastroMenuSelected
+    private void menitemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menitemClienteActionPerformed
+        frmCadastro janela = new frmCadastro();
+        add(janela);
+        janela.setVisible(true);
+    }//GEN-LAST:event_menitemClienteActionPerformed
 
     private void menProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menProdutoActionPerformed
         frmProduto janela = new frmProduto();
-         add(janela);
+        add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menProdutoActionPerformed
 
-    private void menListagemProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemProdutosActionPerformed
+    private void menFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menFormaPagamentoActionPerformed
+        frmFormadePagamento janela = new frmFormadePagamento();
+        add(janela);
+        janela.setVisible(true);
+    }//GEN-LAST:event_menFormaPagamentoActionPerformed
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+       frmListagemCliente janela = new frmListagemCliente();
+       add(janela);
+       janela.setVisible(true);
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void menListarFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarFormaPagamentoActionPerformed
        frmListagemProduto janela = new frmListagemProduto();
        add(janela);
        janela.setVisible(true);
-    }//GEN-LAST:event_menListagemProdutosActionPerformed
+    }//GEN-LAST:event_menListarFormaPagamentoActionPerformed
 
-    private void menClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menClienteActionPerformed
-        frmCadastro janela = new frmCadastro();
-         add(janela);
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        frmListagemFormaPagamento janela = new frmListagemFormaPagamento();
+        add(janela);
         janela.setVisible(true);
-    }//GEN-LAST:event_menClienteActionPerformed
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void menClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menClienteMouseClicked
-     
-    }//GEN-LAST:event_menClienteMouseClicked
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-     frmVenda janela = new frmVenda();
-     add(janela);
-     janela.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void menPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menPagamentoActionPerformed
-      frmFormadePagamento janela = new frmFormadePagamento();
-      add(janela);
-      janela.setVisible(true);
-    }//GEN-LAST:event_menPagamentoActionPerformed
-
-    private void menListagemPagamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemPagamentosActionPerformed
-       frmListagemFormaPagamento janela = new frmListagemFormaPagamento();
+    private void menListarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarVendaActionPerformed
+       frmListagemVenda janela = new frmListagemVenda();
        add(janela);
        janela.setVisible(true);
-    }//GEN-LAST:event_menListagemPagamentosActionPerformed
+    }//GEN-LAST:event_menListarVendaActionPerformed
 
-    private void menListagemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListagemClienteActionPerformed
-        frmListagemCliente janela = new frmListagemCliente();
+    private void menitemClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menitemClienteMouseClicked
+        frmCadastro janela = new frmCadastro();
         add(janela);
         janela.setVisible(true);
-    }//GEN-LAST:event_menListagemClienteActionPerformed
+    }//GEN-LAST:event_menitemClienteMouseClicked
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        frmListagemVenda janela = new frmListagemVenda();
+    private void menItemRealizarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menItemRealizarVendaActionPerformed
+        frmVenda janela = new frmVenda();
         add(janela);
         janela.setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_menItemRealizarVendaActionPerformed
 
+    /**
+     * @param args the command line arguments
+     */
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuBar jMenuBar3;
-    private javax.swing.JMenuBar jMenuBar4;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenuItem menCliente;
-    private javax.swing.JMenuItem menListagemCliente;
-    private javax.swing.JMenuItem menListagemPagamentos;
-    private javax.swing.JMenuItem menListagemProdutos;
-    private javax.swing.JMenuItem menPagamento;
+    private javax.swing.JMenuItem menFormaPagamento;
+    private javax.swing.JMenuItem menItemRealizarVenda;
+    private javax.swing.JMenuItem menListarCliente;
+    private javax.swing.JMenuItem menListarFormaPagamento;
+    private javax.swing.JMenuItem menListarVenda;
     private javax.swing.JMenuItem menProduto;
-    private javax.swing.JMenu menuCadastro;
-    private javax.swing.JMenu menuListagem;
+    private javax.swing.JMenuItem menitemCliente;
+    private javax.swing.JMenu menuCadastroCliente;
     // End of variables declaration//GEN-END:variables
 }
