@@ -36,6 +36,8 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
         btnCancelarListaCliente = new javax.swing.JButton();
         btnSairListaCliente = new javax.swing.JButton();
 
+        setBorder(null);
+
         lblListagemCliente.setText("LISTA DE CLIENTES:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -51,7 +53,7 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(lblListagemCliente)
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
 
         tblListaCliente.setModel(new javax.swing.table.DefaultTableModel(
@@ -100,7 +102,7 @@ public class frmListagemCliente extends javax.swing.JInternalFrame {
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(0, 16, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
