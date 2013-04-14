@@ -36,6 +36,7 @@ public class JFLogin extends javax.swing.JFrame {
         lblLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setExtendedState(4);
 
         jPanel1.setToolTipText("login");
         jPanel1.addAncestorListener(new javax.swing.event.AncestorListener() {
