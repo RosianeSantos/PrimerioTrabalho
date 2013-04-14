@@ -54,7 +54,7 @@ public class frmListagemFormaPagamento extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblListagemFormaPagamento)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tblListaPagamento.setModel(new javax.swing.table.DefaultTableModel(
