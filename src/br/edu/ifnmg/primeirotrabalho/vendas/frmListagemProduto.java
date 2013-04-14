@@ -36,6 +36,8 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
         btnExcluirListaProduto = new javax.swing.JButton();
         btnSairListaProduto = new javax.swing.JButton();
 
+        setBorder(null);
+
         lblListaProduto.setText("LISTA DE PRODUTOS:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -52,7 +54,7 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblListaProduto)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         tblListaProduto.setModel(new javax.swing.table.DefaultTableModel(
@@ -101,7 +103,7 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 11, Short.MAX_VALUE))))
+                                .addGap(0, 27, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(147, 147, 147)
                         .addComponent(btnAlterarListaProduto)
