@@ -51,7 +51,7 @@ public class frmVenda extends javax.swing.JInternalFrame {
 
         setBorder(null);
 
-        jLabel1.setText("VENDA:");
+        jLabel1.setText("VENDA");
 
         tblCadastroVenda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
