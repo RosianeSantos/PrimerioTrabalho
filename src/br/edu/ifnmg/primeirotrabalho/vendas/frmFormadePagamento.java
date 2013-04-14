@@ -37,7 +37,7 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
 
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lblFormaPagamento.setText("FORMA DE PAGAMENTO:");
+        lblFormaPagamento.setText("FORMA DE PAGAMENTO");
 
         jLabel1.setText("Tipo:");
 
@@ -83,7 +83,7 @@ public class frmFormadePagamento extends javax.swing.JInternalFrame {
                     .addComponent(txtTipoPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSalvar)
                     .addComponent(btnSairFormadePagamento))
-                .addContainerGap(211, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
