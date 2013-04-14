@@ -43,6 +43,9 @@ public class frmProduto extends javax.swing.JInternalFrame {
         btnSairProduto = new javax.swing.JButton();
 
         setBorder(null);
+        setDoubleBuffered(true);
+        setFocusCycleRoot(false);
+        setOpaque(true);
         setVisible(true);
 
         lblCadastroProduto.setText("CADASTRO DE PRODUTOS:");
