@@ -51,7 +51,7 @@ public class frmPrincipal extends javax.swing.JFrame {
         jMenuBar2.add(jMenu3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setExtendedState(6);
+        setResizable(false);
 
         jPanel1.setDoubleBuffered(false);
         jPanel1.setFocusCycleRoot(true);
@@ -60,11 +60,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 576, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 370, Short.MAX_VALUE)
         );
 
         menuCadastroCliente.setText("Cadastro");
@@ -108,6 +108,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         });
 
         menListarCliente.setText("Cliente");
+        menListarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menListarClienteActionPerformed(evt);
+            }
+        });
         jMenu2.add(menListarCliente);
 
         menListarFormaPagamento.setText("Produto");
@@ -154,11 +159,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -166,57 +171,63 @@ public class frmPrincipal extends javax.swing.JFrame {
 
     private void menitemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menitemClienteActionPerformed
         frmCadastro janela = new frmCadastro();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menitemClienteActionPerformed
 
     private void menProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menProdutoActionPerformed
         frmProduto janela = new frmProduto();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menProdutoActionPerformed
 
     private void menFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menFormaPagamentoActionPerformed
         frmFormadePagamento janela = new frmFormadePagamento();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menFormaPagamentoActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
        frmListagemCliente janela = new frmListagemCliente();
-       add(janela);
+       this.jPanel1.add(janela);
        janela.setVisible(true);
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void menListarFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarFormaPagamentoActionPerformed
        frmListagemProduto janela = new frmListagemProduto();
-       add(janela);
+       this.jPanel1.add(janela);
        janela.setVisible(true);
     }//GEN-LAST:event_menListarFormaPagamentoActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         frmListagemFormaPagamento janela = new frmListagemFormaPagamento();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void menListarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarVendaActionPerformed
        frmListagemVenda janela = new frmListagemVenda();
-       add(janela);
+       this.jPanel1.add(janela);
        janela.setVisible(true);
     }//GEN-LAST:event_menListarVendaActionPerformed
 
     private void menitemClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menitemClienteMouseClicked
         frmCadastro janela = new frmCadastro();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menitemClienteMouseClicked
 
     private void menItemRealizarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menItemRealizarVendaActionPerformed
         frmVenda janela = new frmVenda();
-        add(janela);
+        this.jPanel1.add(janela);
         janela.setVisible(true);
     }//GEN-LAST:event_menItemRealizarVendaActionPerformed
+
+    private void menListarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menListarClienteActionPerformed
+        frmListagemCliente janela = new frmListagemCliente();
+        this.jPanel1.add(janela);
+        janela.setVisible(true);
+    }//GEN-LAST:event_menListarClienteActionPerformed
 
     
     /**
