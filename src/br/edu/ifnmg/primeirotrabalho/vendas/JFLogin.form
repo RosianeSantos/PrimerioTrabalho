@@ -53,15 +53,16 @@
                               <Component id="lblNome" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="btnEntrar" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtNome" max="32767" attributes="0"/>
+                              <Component id="txtSenha" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnEntrar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnSair" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtNome" max="32767" attributes="0"/>
-                                  <Component id="txtSenha" pref="167" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -70,7 +71,7 @@
                           <Component id="lblLogin" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="122" max="32767" attributes="0"/>
+                  <EmptySpace pref="106" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -94,7 +95,9 @@
                       <Component id="btnEntrar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnSair" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="106" max="32767" attributes="0"/>
+                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -111,8 +114,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNome">
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtSenha">
         </Component>
         <Component class="javax.swing.JButton" name="btnEntrar">
           <Properties>
@@ -134,6 +135,13 @@
         <Component class="javax.swing.JLabel" name="lblLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="LOGIN"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtSenha">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nome: rosy, Senha:123"/>
           </Properties>
         </Component>
       </SubComponents>

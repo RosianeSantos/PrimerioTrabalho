@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Rosy
@@ -30,10 +32,11 @@ public class JFLogin extends javax.swing.JFrame {
         lblNome = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JTextField();
         btnEntrar = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         lblLogin = new javax.swing.JLabel();
+        txtSenha = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(4);
@@ -74,6 +77,8 @@ public class JFLogin extends javax.swing.JFrame {
 
         lblLogin.setText("LOGIN");
 
+        jLabel1.setText("Nome: rosy, Senha:123");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -86,18 +91,19 @@ public class JFLogin extends javax.swing.JFrame {
                             .addComponent(lblSenha)
                             .addComponent(lblNome))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtNome)
+                            .addComponent(txtSenha)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnEntrar)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(btnEntrar))
                                 .addGap(18, 18, 18)
-                                .addComponent(btnSair))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNome)
-                                .addComponent(txtSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))))
+                                .addComponent(btnSair))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblLogin)))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,7 +122,9 @@ public class JFLogin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEntrar)
                     .addComponent(btnSair))
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(34, 34, 34))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,12 +146,17 @@ public class JFLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanel1AncestorAdded
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+       if(txtNome.getText().equals("rosy") && (txtSenha.getText().equals("123"))){
+        JOptionPane.showMessageDialog(rootPane,"Bem-Vindo!");
         frmPrincipal janela = new frmPrincipal();
         janela.setVisible(true);
         this.setVisible(false);
         this.dispose();
+         }else{
+            JOptionPane.showMessageDialog(rootPane,"Acesso Negado!");
+        }
     }//GEN-LAST:event_btnEntrarActionPerformed
-
+    
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
      
     }//GEN-LAST:event_btnEntrarMouseClicked
@@ -198,11 +211,12 @@ public class JFLogin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnSair;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JTextField txtNome;
-    private javax.swing.JTextField txtSenha;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
