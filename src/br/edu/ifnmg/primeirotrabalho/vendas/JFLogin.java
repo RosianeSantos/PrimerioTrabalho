@@ -153,7 +153,7 @@ public class JFLogin extends javax.swing.JFrame {
         this.setVisible(false);
         this.dispose();
          }else{
-            JOptionPane.showMessageDialog(rootPane,"Acesso Negado!");
+            JOptionPane.showMessageDialog(rootPane,"Usuario Invalido!");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
     
