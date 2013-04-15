@@ -195,6 +195,16 @@ public class frmCadastro extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        boolean validar = true;
+        
+        // Teste para caracteres do nome
+        if ((txtNomeCliente.getText().trim().length()<3) || (txtNomeCliente.getText().length() > 250 )){
+        JOptionPane.showConfirmDialog(rootPane, "Caracteres só acima de 3 digitos!","Titulo",JOptionPane.ERROR_MESSAGE);
+        txtNomeCliente.requestFocus();
+        validar=false;
+        }
+        
+        if(validar){
         if(JOptionPane.showConfirmDialog(rootPane, "Deseja Realizar o Cadastro")== 0){
           //btnRealizarVenda.setText("Salvo");
           JOptionPane.showMessageDialog(rootPane, "Cadastro realizado com Sucesso!");
@@ -202,6 +212,7 @@ public class frmCadastro extends javax.swing.JInternalFrame {
          // btnRealizarVenda.setText("Não Salvo");
           JOptionPane.showMessageDialog(rootPane, "Cadastro Cancelado ","Titulo",JOptionPane.INFORMATION_MESSAGE);
        }
+        }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
