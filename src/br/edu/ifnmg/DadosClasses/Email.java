@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  *
- * @author emerson
+ * @author rosy
  */
 public class Email {
     private int Id;
