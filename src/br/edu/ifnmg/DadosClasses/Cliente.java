@@ -6,7 +6,7 @@ package br.edu.ifnmg.DadosClasses;
 
 /**
  *
- * @author emerson
+ * @author rosy
  */
 public class Cliente extends Pessoa {
     private int Id;
