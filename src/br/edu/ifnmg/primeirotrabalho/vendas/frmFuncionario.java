@@ -148,6 +148,16 @@ public class frmFuncionario extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalvaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvaFuncionarioActionPerformed
+         boolean validar = true;
+        
+        // Teste para caracteres do nome
+        if ((txtNomeFuncionario.getText().trim().length()<3) || (txtNomeFuncionario.getText().length() > 250 )){
+        JOptionPane.showConfirmDialog(rootPane, "Caracteres só acima de 3 digitos!","Titulo",JOptionPane.ERROR_MESSAGE);
+        txtNomeFuncionario.requestFocus();
+        validar=false;
+        }
+        
+        if(validar){  
         if(JOptionPane.showConfirmDialog(rootPane, "Deseja confirmar o Cadastro")== 0){
           //btnRealizarVenda.setText("Salvo");
           JOptionPane.showMessageDialog(rootPane, "Cadastro Realizado com sucesso!");
@@ -155,6 +165,7 @@ public class frmFuncionario extends javax.swing.JInternalFrame {
          // btnRealizarVenda.setText("Não Salvo");
           JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario ","Funcionario",JOptionPane.INFORMATION_MESSAGE);
        }
+        }
     }//GEN-LAST:event_btnSalvaFuncionarioActionPerformed
 
     private void btnSairFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairFuncionarioActionPerformed
