@@ -14,6 +14,18 @@ public class Produto {
     String nomeProduto;
     double valorUnitario;
     double estoque;
+    
+    public Produto(){
+        this.idProduto = 0;
+        this.nomeProduto = "";
+        this.valorUnitario = 0;
+    }
+    
+    public Produto(int id_, String nom, double val){
+        this.idProduto = id_;
+        this.nomeProduto = nom;
+        this.valorUnitario = val;
+    }
 
     public int getIdProduto() {
         return idProduto;
