@@ -31,7 +31,7 @@ public class BancoDados {
             
             Class.forName("com.mysql.jdbc.Driver");
             conexao = DriverManager
-                    .getConnection("jdbc:mysql://localhost:3306/teste","root","12345");
+                    .getConnection("jdbc:mysql://localhost:3306/trabalhovendas","root","1234");
             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(BancoDados.class.getName()).log(Level.SEVERE, null, ex);                    
