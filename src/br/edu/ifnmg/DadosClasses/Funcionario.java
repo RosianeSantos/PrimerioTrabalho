@@ -23,6 +23,11 @@ public class Funcionario extends Pessoa{
         Senha = "";
     }
     
+    public Funcionario(int codigo, String usuari, String sen){
+        this.Id = codigo;
+        this.Usuario = usuari;
+        this.Senha = sen;
+    }
     //----
     
      public int getId(){
