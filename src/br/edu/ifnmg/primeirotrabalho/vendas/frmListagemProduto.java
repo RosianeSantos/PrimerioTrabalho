@@ -4,21 +4,56 @@
  */
 package br.edu.ifnmg.primeirotrabalho.vendas;
 
+import br.edu.ifnmg.DadosClasses.Produto;
+import br.edu.ifnmg.Teste.DataAcess.ProdutoDAO;
+import java.util.List;
+import java.util.Vector;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Rosy
  */
 public class frmListagemProduto extends javax.swing.JInternalFrame {
+    ProdutoDAO produto;
+    ProdutoDAO dao = new ProdutoDAO();
 
     /**
      * Creates new form frmListagemProduto
      */
     public frmListagemProduto() {
         initComponents();
+      dao = new ProdutoDAO();
+      
+      List<Produto> produto = dao.listarTodos();
+      
+      preencherTabela(produto);
     }
 
+      private void preencherTabela(List<Produto> lista) {
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("idProduto");
+        model.addColumn("nomeProduto");
+        model.addColumn("descricao");
+        model.addColumn("valorUnitario");
+        model.addColumn("valorVenda");
+        model.addColumn("estoque");
+        
+        for (Produto p : lista) {
+            Vector valores = new Vector();
+            valores.add(0,p.getIdProduto());
+            valores.add(1,p.getNomeProduto());
+            valores.add(2,p.getDescricao());
+            valores.add(3,p.getValorUnitario());
+            valores.add(4,p.getValorVenda());
+            valores.add(5,p.getEstoque());
+            model.addRow(valores);
+        }
+        tblListaProduto.setModel(model);
+        tblListaProduto.repaint();
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,9 +67,9 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
         lblListaProduto = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblListaProduto = new javax.swing.JTable();
-        btnAlterarListaProduto = new javax.swing.JButton();
-        btnExcluirListaProduto = new javax.swing.JButton();
         btnSairListaProduto = new javax.swing.JButton();
+        btnFiltrarProduto = new javax.swing.JButton();
+        txtFiltrarProduto = new javax.swing.JTextField();
 
         setBorder(null);
 
@@ -47,7 +82,7 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblListaProduto)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(296, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -59,30 +94,21 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
 
         tblListaProduto.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Descrição", "Valor do Produto", "Valor da Venda", "Estoque"
+
             }
         ));
+        tblListaProduto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblListaProdutoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblListaProduto);
-
-        btnAlterarListaProduto.setText("Alterar");
-        btnAlterarListaProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlterarListaProdutoActionPerformed(evt);
-            }
-        });
-
-        btnExcluirListaProduto.setText("Excluir");
-        btnExcluirListaProduto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExcluirListaProdutoActionPerformed(evt);
-            }
-        });
 
         btnSairListaProduto.setText("Sair");
         btnSairListaProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -91,75 +117,84 @@ public class frmListagemProduto extends javax.swing.JInternalFrame {
             }
         });
 
+        btnFiltrarProduto.setText("Filtrar");
+        btnFiltrarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarProdutoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnSairListaProduto)
+                .addGap(18, 18, 18))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 412, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtFiltrarProduto)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnFiltrarProduto)
+                        .addGap(25, 25, 25)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 215, Short.MAX_VALUE)
-                .addComponent(btnAlterarListaProduto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnExcluirListaProduto)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSairListaProduto)
-                .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSairListaProduto)
-                    .addComponent(btnExcluirListaProduto)
-                    .addComponent(btnAlterarListaProduto))
+                    .addComponent(btnFiltrarProduto)
+                    .addComponent(txtFiltrarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSairListaProduto)
                 .addGap(100, 100, 100))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnExcluirListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirListaProdutoActionPerformed
-        if(JOptionPane.showConfirmDialog(rootPane, "Deseja excluir a opção")== 0){
-          //btnRealizarVenda.setText("Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Exclusão Realizada com sucesso!");
-       }else{
-         // btnRealizarVenda.setText("Não Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
-       }
-    }//GEN-LAST:event_btnExcluirListaProdutoActionPerformed
-
-    private void btnAlterarListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarListaProdutoActionPerformed
-      if(JOptionPane.showConfirmDialog(rootPane, "Deseja alterar a opção")== 0){
-          //btnRealizarVenda.setText("Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Alteração Realizada com sucesso!");
-       }else{
-         // btnRealizarVenda.setText("Não Salvo");
-          JOptionPane.showMessageDialog(rootPane, "Operação Cancelada pelo Usuario! ","Titulo",JOptionPane.INFORMATION_MESSAGE);
-       }
-    }//GEN-LAST:event_btnAlterarListaProdutoActionPerformed
-
     private void btnSairListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairListaProdutoActionPerformed
       this.setVisible(false);
         this.dispose();
     }//GEN-LAST:event_btnSairListaProdutoActionPerformed
 
+    private void tblListaProdutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblListaProdutoMouseClicked
+        Object valor = tblListaProduto.getValueAt( tblListaProduto.getSelectedRow(), 0);
+        Produto p = dao.Abrir((int)valor);
+        frmEditaProduto janela = new frmEditaProduto(p, dao);
+        this.add(janela);
+        janela.setVisible(true);
+      //  this.setVisible(false);
+    }//GEN-LAST:event_tblListaProdutoMouseClicked
+
+    private void btnFiltrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarProdutoActionPerformed
+        Produto p = new Produto();
+        p.setNomeProduto(txtFiltrarProduto.getText());
+        p.setDescricao(txtFiltrarProduto.getText());
+        List<Produto> lista = dao.buscar(p);
+        
+        preencherTabela(lista);
+    }//GEN-LAST:event_btnFiltrarProdutoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAlterarListaProduto;
-    private javax.swing.JButton btnExcluirListaProduto;
+    private javax.swing.JButton btnFiltrarProduto;
     private javax.swing.JButton btnSairListaProduto;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblListaProduto;
     private javax.swing.JTable tblListaProduto;
+    private javax.swing.JTextField txtFiltrarProduto;
     // End of variables declaration//GEN-END:variables
+
+   
 }
