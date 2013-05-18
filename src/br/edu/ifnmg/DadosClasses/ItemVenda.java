@@ -9,10 +9,11 @@ package br.edu.ifnmg.DadosClasses;
  * @author Rosy
  */
 public class ItemVenda {
-    private int id;
-    private Produto produto;
-    private int quantidade;
-    private float Valor_Produto;
+    int id;
+    Produto produto;
+    int quantidade;
+   float Valor_Produto;
+    private boolean ativo;
     
     
     //-------
@@ -42,6 +43,22 @@ public class ItemVenda {
             System.out.print("Valor Inválido!");
         }
     }
+
+    public boolean isAtivo() {
+      return ativo;
+    }
     
+    public void setAtivo(boolean ativo){
+        this.ativo = ativo;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id){
+        this.id = id;
+    }
+
     
 }
