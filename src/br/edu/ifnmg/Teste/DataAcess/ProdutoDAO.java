@@ -27,18 +27,16 @@ public class ProdutoDAO {
 
     public boolean Salvar(Produto obj) {
         try {
-            if (obj.getIdProduto() == 0) {
-                PreparedStatement comando = bd.getConexao().prepareStatement("insert into produto(nomeProduto,valorUnitario) values(?,?)");
+                PreparedStatement comando = bd.getConexao().prepareStatement("insert into produto(nomeProduto,descricao,valorUnitario,valorVenda,estoque) values(?,?,?,?,?)");
                 comando.setString(1, obj.getNomeProduto());
-                comando.setDouble(2, obj.getValorUnitario());
+                comando.setString(2, obj.getDescricao());
+                comando.setDouble(3, obj.getValorUnitario());
+                comando.setDouble(4, obj.getValorVenda());
+                comando.setDouble(5, obj.getEstoque());
                 comando.executeUpdate();
-            } else {
-                PreparedStatement comando = bd.getConexao().prepareStatement("update produto set nomeProduto = ?,valorUnitario = ? where idProduto = ?");
-                comando.setString(1, obj.getNomeProduto());
-                comando.setDouble(2, obj.getValorUnitario());
-                comando.setDouble(3, obj.getIdProduto());
-                comando.executeUpdate();
-            }
+                
+               
+            
             return true;
         } catch (SQLException ex) {
             Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -48,9 +46,9 @@ public class ProdutoDAO {
 
     public Produto Abrir(int id) {
         try {
-            Produto produto = new Produto(0, "", 0);
+            Produto produto = new Produto(0, "", "",0,0,0);
 
-            PreparedStatement comando = bd.getConexao().prepareStatement("select * from produto where id = ?");
+            PreparedStatement comando = bd.getConexao().prepareStatement("select * from produto where idProduto = ?");
             comando.setInt(1, id);
             ResultSet resultado = comando.executeQuery();
 
@@ -58,7 +56,10 @@ public class ProdutoDAO {
 
             produto.setIdProduto(resultado.getInt("idProduto"));
             produto.setNomeProduto(resultado.getString("nomeProduto"));
+            produto.setDescricao(resultado.getString("descricao"));
             produto.setValorUnitario(resultado.getDouble("valorUnitario"));
+            produto.setValorVenda(resultado.getDouble("valorVenda"));
+            produto.setEstoque(resultado.getDouble("estoque"));
 
             return produto;
 
@@ -92,7 +93,10 @@ public class ProdutoDAO {
                 // Pega os valores do retorno da consulta e coloca no objeto
                 tmp.setIdProduto(resultado.getInt("idProduto"));
                 tmp.setNomeProduto(resultado.getString("nomeProduto"));
+                tmp.setDescricao(resultado.getString("descricao"));
                 tmp.setValorUnitario(resultado.getDouble("valorUnitario"));
+                tmp.setValorVenda(resultado.getDouble("valorVenda"));
+                tmp.setEstoque(resultado.getDouble("estoque"));
                 // Pega o objeto e coloca na lista
                 produtos.add(tmp);
             }
@@ -140,7 +144,10 @@ public class ProdutoDAO {
                 // Pega os valores do retorno da consulta e coloca no objeto
                 tmp.setIdProduto(resultado.getInt("idProduto"));
                 tmp.setNomeProduto(resultado.getString("nomeProduto"));
+                tmp.setDescricao(resultado.getString("descricao"));
                 tmp.setValorUnitario(resultado.getDouble("valorUnitario"));
+                tmp.setValorVenda(resultado.getDouble("valorVenda"));
+                tmp.setEstoque(resultado.getDouble("estoque"));
                 // Pega o objeto e coloca na lista
                 produtos.add(tmp);
             }
